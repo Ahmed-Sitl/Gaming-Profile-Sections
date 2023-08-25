@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --padd10: 10px;
+    --padd20: 20px;
+    --marg5: 5px;
+    --marg10: 10px;
+    --marg20: 20px;
+    --marg30: 30px;
+}
+
+/* container for the page */
+.container {
+    width: 100%;
+    background-color: #eee;
+    padding: 30px;
+}
+
+/* -------------------- */
+/* style of header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------------- */
+
+/* style of header sidbar */
+
+.header .sidbar {
+    padding: var(--padd20);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    position: relative;
+}
+
+.header .sidbar::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #d3d3d3;
+    position: absolute;
+    right: 0;
+}
+
+.header .sidbar .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.384);
+}
+
+.header .sidbar .img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header .sidbar span {
+    margin: var(--marg5);
+}
+
+.header .sidbar span:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header .sidbar .line {
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to right, #009688 0, #009688 80%, #f1f1f1 80%, #f1f1f1 100%);
+    border-radius: 5px;
+}
+
+.header .sidbar span:last-child {
+    font-size: 13px;
+}
+
+.header .sidbar span span {
+    color: #009688;
+}
+
+/* ----------------- */
+
+/* style of header content */
+
+.header .content {
+    background-color: white;
+    width: 80%;
+    padding: var(--padd20);
+    position: relative;
+}
+
+.header .content h1 {
+    margin-bottom: var(--marg10);
+}
+
+.header .content p {
+    line-height: 40px;
+}
+
+.header .content span:last-child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: var(--padd20);
+}
+
+/* --------------- */
+/* all the styles that are sharing between all classes */
+.points,
+.trophies,
+.ladder_news,
+.power {
+    margin-top: var(--marg30);
+    width: 100%;
+    background-color: white;
+    padding: var(--padd20);
+}
+
+.points h2,
+.trophies h2,
+.ladder_news h2,
+.power h2 {
+    color: white;
+    background-color: #607d8b;
+    width: fit-content;
+    padding: var(--padd10);
+}
+
+/* --------------------------------------------------- */
+
+/* ---- points ----  */
+
+.points p {
+    padding-top: var(--padd20);
+    padding-bottom: var(--padd20);
+}
+
+.points p span:first-child {
+    color: #30a599;
+}
+
+.points p span:last-child {
+    color: #ea3b7a;
+}
+
+/* ----------------- */
+/* ------ trophies -------- */
+
+.trophies .img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: var(--marg20);
+}
+
+.trophies .img img {
+    width: 8%;
+}
+
+.trophies .img img:nth-child(6),
+.trophies .img img:nth-child(10),
+.trophies .img img:nth-child(13),
+.trophies .img img:nth-child(15),
+.trophies .img img:nth-child(17),
+.trophies .img img:nth-child(19) {
+    opacity: 0.2;
+}
+
+/* ------------------------ */
+/* --- ladder_news --- */
+.ladder_news p {
+    margin-top: var(--marg20);
+    font-size: 20px;
+}
+
+.ladder_news p span:first-child {
+    color: #f45754;
+}
+
+.ladder_news p span:last-child {
+    color: #2597f3;
+}
+
+/* ------------------- */
+
+
+/* ---- powers ----- */
+
+hr {
+    height: 1px;
+    background-color: #eee;
+    border: none;
+    margin: var(--marg10) 0;
+}
+
+.power div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    position: relative;
+}
+
+.power div:nth-child(2) {
+    margin-top: var(--marg20);
+}
+
+.power div .yes {
+    color: #01800d;
+}
+
+.power div .no {
+    color: #ff0f00;
+}
